@@ -3,14 +3,100 @@
 
 @font-face {
     font-family: ProductSans;
-    src: url(../fonts/ProductSans-Regular.otf);
+    src: url(../fonts/ProductSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: ProductSans;
+    src: url(../fonts/ProductSans-Bold.ttf);
+    font-weight: bold;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
 	font-family: ProductSans;
-	letter-spacing: 0.25px;
+	color: #757575;
+	font-size: 14pt;
 	background-color: #F4F4F4;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding: 50px 20px;
+	max-width: 800px;
 }
+
+#header {
+	display: grid;
+	grid-template-columns: auto auto;
+	margin-bottom: 50px;
+}
+
+#gdg-logo {
+	width: 100%;
+	max-width: 250px;
+	padding-left: 5px;
+}
+
+#header-flag {
+	margin-left: auto;
+	padding-top: 3px;
+	padding-right: 5px;
+}
+
+#header-flag > img {
+	width: 30px;
+}
+
+#image-header {
+	width: 100%;
+	border: 1px rgba(0, 0, 0, 0) solid;
+	border-radius: 8px;
+}
+
+#text-header {
+	font-size: 24pt;
+}
+
+#footer {
+	text-align: center;
+	margin-top: 50px;
+}
+
+#footer > a {
+	display: inline-block;
+}
+
+.social-icon {
+	width: 30px;
+	padding: 10px;
+	opacity: 0.5;
+	transition: opacity 0.2s ease;
+}
+
+.social-icon:hover {
+	opacity: 1.0;
+	transition: opacity 0.2s ease;
+}
+
+#github-icon {
+	width: 24px;
+	padding-bottom: 12px;
+}
+
+
+/* Media queries */
+
+@media (max-width: 350px) {
+	#header-flag { 
+		display: none;
+	}
+}
+
+
+/* Unused */
 
 #placeholder {
 	position: absolute;
@@ -25,10 +111,5 @@ body {
 
 #placeholder-subtitle {
 	font-size: 14pt;
-	color: #757575;
 	text-align: center;
-}
-
-#gdg-logo {
-	width: 250px;
 }
