@@ -69,14 +69,14 @@ body {
 	display: inline-block;
 }
 
-.social-icon {
+.link-icon {
 	width: 30px;
 	padding: 10px;
 	opacity: 0.5;
 	transition: opacity 0.2s ease;
 }
 
-.social-icon:hover {
+.link-icon:hover {
 	opacity: 1.0;
 	transition: opacity 0.2s ease;
 }
