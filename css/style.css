@@ -44,10 +44,15 @@ a:hover {
 }
 
 code {
+	/*
 	margin-left: 2px;
-	padding: 4px 6px 6px 20px;
-	background-color: #FFFEFA;
 	border-left: 4px #A5A5A5 solid;
+	padding: 4px 6px 6px 20px;
+	*/
+	padding: 4px 6px 6px 4px;
+	background-color: #FFFEFA;
+	border: 1px solid #FFFEFA;
+	border-radius: 4px;
 }
 
 
@@ -156,8 +161,9 @@ code {
 
 /* Code Speedrun */
 
-.increase-space {
-	margin-top: 30px;
+.code-speedrun-output {
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 
