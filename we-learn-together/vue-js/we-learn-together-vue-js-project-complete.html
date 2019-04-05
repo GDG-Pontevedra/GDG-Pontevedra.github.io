@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>We Learn Together: Vue.js</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"> </script>
+
+		<style>
+			p {
+				display: inline;
+			}
+			.tarefaCompletada {
+				text-decoration: line-through;
+				opacity: 0.5;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="app">
+			<input v-model="this.novaTarefa">
+			<button v-on:click="engadirTarefa">Engadir</button>
+			<ul>
+				<tarefa 
+					v-for="tarefa in this.tarefas"
+					v-bind:key="tarefa.key"
+					v-bind:titulo="tarefa.titulo"
+				/>
+			</ul>
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+
+		Vue.component('tarefa', {
+			template: '\
+				<div style="margin-bottom: 10px">\
+					<input type="checkbox" v-model="completada">\
+					<p \
+						v-bind:class="{ tarefaCompletada: this.completada }"\
+					>\
+						{{ titulo }}\
+						<span style="opacity: 0.5">{{ this.dia }}</span>\
+					</p>\
+				</div>\
+			',
+			data: function() {
+				return {
+					dia: '03/04/2019',
+					completada: false
+				}
+			},
+			props: [ 'titulo' ]
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				tarefas: [],
+				novaTarefa: ''
+			},
+			methods: {
+				engadirTarefa: function() {
+					this.tarefas.push({
+						id: this.tarefas.length,
+						titulo: novaTarefa
+					});
+					this.novaTarefa = '';
+				}
+			}
+		});
+
+	</script>
+
+</html>  
